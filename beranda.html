@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/beranda.css">
+    <script src="https://cdn.jsdelivr.net/npm/@kontenbase/sdk"></script>
+    <title>Beranda</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <a href="beranda.html">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+
+        <div class="middle">
+            <input type="text" placeholder="explore">
+        </div>
+
+        <div class="right">
+            <a href="verification.html">
+                <i class="fa-solid fa-circle-check"></i>
+            </a>
+            <a class="logout" href="#" onclick="logout()">Logout</a>
+            <i class="fa-solid fa-expand"></i>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="left-side">
+            <div class="card profile">
+                <div class="banner">
+                    <img src="./assets/img/backdrop.jpg" alt="">
+                </div>
+                <div class="biodata">
+                    <img src="./assets/img/profile.jpg" alt="" id="avatar-profile">
+                    <h3 id="fullname">Ilham Fathullah</h3>
+                    <p class="username" id="username">@ilfat_fathul</p>
+                    <p class="bio" id="biodata">Play Hard, Study Hard, Istira Hard</p>
+                </div>
+                <hr>
+                <div class="follow">
+                    <div class="following">
+                        <h2>57k</h2>
+                        <p>following</p>
+                    </div>
+                    <div class="followers">
+                        <h2>282</h2>
+                        <p>followers</p>
+                    </div>
+                </div>
+                <hr>
+                <a href="edit-profile.html">Edit Profile</a>
+                <hr>
+                <a href="my-thread.html">My Thread</a>
+            </div>
+
+            <div class="card list-follow p-20">
+                <h3>Who is to follow you</h3>
+
+                <div class="list-suggest" id="list-suggest">
+
+                    <div class="suggest">
+
+                        <div class="avatar">
+                            <img src="./assets/img/profile.jpg" alt="">
+                        </div>
+
+                        <div class="account">
+                            <a href="">
+                                Steve Rogers
+                            </a>
+                            <p>@steve_r</p>
+                        </div>
+
+                        <div class="btn-follow">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                    <div class="suggest">
+                        <div class="avatar">
+                            <img src="./assets/img/profile.jpg" alt="">
+                        </div>
+                        <div class="account">
+                            <a href="">
+                                Steve Rogers
+                            </a>
+                            <p>@steve_r</p>
+                        </div>
+                        <div class="btn-follow">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-side">
+            <div class="card p-20 post-thread">
+                <div class="left">
+                    <img src="./assets/img/profile.jpg" alt="" id="avatar-thread">
+                </div>
+                <div class="right">
+                    <form id="form-thread">
+                        <textarea id="content" placeholder="What's happening?" rows="5"></textarea>
+                        <input id="hastag" type="text" placeholder="# Hastag (optional)">
+                        <div class="file-button-group">
+                            <div class="file">
+                                <label for="file-photo">
+                                    <i class="fa-solid fa-image"></i><span id="photo-name"> Photo</span>
+                                </label>
+                                <input type="file" hidden id="file-photo" onchange="changeName()">
+                                <label for="file-video">
+                                    <i class="fa-solid fa-circle-play"></i><span id="video-name"> Video</span>
+                                </label>
+                                <input type="file" hidden id="file-video" onchange="changeName()">
+                            </div>
+                            <div class="btn-publish">
+                                <button type="button" onclick="addThread()" >Publish</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="thread-container">
+                
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="card p-20">
+                <h3>Trend for you</h3>
+                <div class="list-trend">
+                    <div class="trend">
+                        <div class="left-trend">
+                            <a href="data-hashtag.html">
+                                <h4>#SpiderMan</h4>
+                            </a>
+                            <p>87K Tweets</p>
+                        </div>
+                        <div class="right-trend">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                    <div class="trend">
+                        <div class="left-trend">
+                            <a href="">
+                                <h4>#SpiderMan</h4>
+                            </a>
+                            <p>87K Tweets</p>
+                        </div>
+                        <div class="right-trend">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                    <div class="trend">
+                        <div class="left-trend">
+                            <a href="">
+                                <h4>#SpiderMan</h4>
+                            </a>
+                            <p>87K Tweets</p>
+                        </div>
+                        <div class="right-trend">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/thread.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+body{
+    background-color: #122232;
+    background-image: url('../img/logo-large.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 45%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header img {
+    position: top left ;
+    padding: 15px;
+}
+
+.container{
+    height: 89vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    border: 1px solid #00000033;
+    border-radius: 16px;
+    background-color: rgba(38, 56, 73, 0.55);
+
+}
+
+form{
+    width: 100%;
+    color: white;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+form h1{
+    text-align: center;
+    margin-top:0 ;
+}
+form div input{
+    background-color: #394E63;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom:10px ;
+    border-radius: 10px;
+}
+
+form div input:focus{
+    outline: #6A9EA9 solid 0.5px;
+}
+
+form div input::placeholder{
+    color: #6A9EA9;
+}
+
+form button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: #0B8596;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: white;
+    color: #0B8596;
+}
+
+form p{
+    text-align: center;
+    color: #0B8596;
+    font-size: 15px;
+}
+
+form p a{
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+}

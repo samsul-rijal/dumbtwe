@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #122232;
+}
+
+.navbar {
+  display: flex;
+  padding: 5px 20px;
+}
+
+.navbar div {
+  display: flex;
+  flex: 1;
+}
+
+.navbar .left i {
+  color: aqua;
+  font-size: 25px;
+}
+
+.navbar .middle {
+  justify-content: center;
+}
+
+.navbar .middle input {
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 25px;
+  background-color: #334960;
+  color: white;
+  text-align: left;
+}
+
+.navbar .middle input::placeholder {
+  text-align: center;
+}
+
+.navbar .right {
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+}
+
+.navbar .right a.logout {
+  text-decoration: none;
+  color: #c0cad3;
+  background-color: #0c3b6b;
+  padding: 5px 20px;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.navbar .right i {
+  color: white;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.content div.left-side,
+.content div.right-side {
+  flex: 20%
+}
+
+.content div.middle-side {
+  flex: 60%;
+  margin: 0px 20px;
+}
+
+.p-20 {
+  padding: 20;
+}
+
+.card {
+  background-color: #263849;
+  border-radius: 16px;
+  color: white;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.profile {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  object-fit: cover;
+  height: 80px;
+}
+
+.profile .biodata img {
+  border-radius: 50%;
+  width: 30%;
+  margin-bottom: 10px;
+  margin-top: -40px;
+}
+
+.profile .biodata .username {
+  color: #9f9f9f;
+}
+
+.profile .biodata .bio {
+  margin-top: 15px;
+  color: #c7c4c4;
+}
+
+.profile hr {
+  margin: 10px 20px;
+  border: 1px solid #8a8888;
+}
+
+.profile .follow {
+  display: flex;
+}
+
+.profile .follow div {
+  flex: 1;
+}
+
+.profile .follow p {
+  color: #c7c4c4;
+}
+
+.profile .follow div.following {
+  border-right: 1px solid #d0d0d0;
+}
+
+.profile a {
+  text-decoration: none;
+  color: #00b7df;
+}
+
+.list-follow {
+  margin-top: 20px;
+}
+
+.list-follow .suggest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.list-follow .suggest div:nth-child(odd) {
+  flex: 1;
+}
+
+.list-follow .suggest div:nth-child(2) {
+  flex: 2;
+
+}
+
+.suggest .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.suggest .account {
+  padding-left: 10px;
+  /* background-color: #00B7DF; */
+  color: #c7c4c4;
+}
+
+.suggest .account a {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.suggest .btn-follow button {
+  border: none;
+  padding: 5px 8px;
+  background-color: white;
+  border-radius: 15px;
+  color: #263849;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.middle-side .post-thread {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.post-thread .left {
+  flex: 6%;
+}
+
+.post-thread .left img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.post-thread .right {
+  flex: 94%;
+  padding-left: 20px;
+}
+
+.post-thread .right textarea,
+input {
+  background-color: #4e657c;
+  color: #c0cad3;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.post-thread .right textarea::placeholder,
+input::placeholder {
+  color: #9f9f9f;
+}
+
+.post-thread .right textarea:focus,
+input:focus {
+  color: #c0cad3;
+  outline: none;
+}
+
+.post-thread .right .file-button-group {
+  margin-top: 20px;
+  display: flex;
+}
+
+.post-thread .right .file-button-group .file {
+  flex: 1;
+  display: flex;
+}
+
+.post-thread .right .file-button-group .btn-publish {
+  flex: 1;
+  text-align: right;
+}
+
+.post-thread .right .file-button-group button {
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00b7df;
+  font-weight: 700;
+  color: #263849;
+  cursor: pointer;
+}
+
+.post-thread .right .file-button-group .file label {
+  border-radius: 20px;
+  border: 2px solid #4e657c;
+  font-weight: 300;
+  padding: 7px 20px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.post-thread .right .file-button-group .file label i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-thread .right .file-button-group .file label i.fa-image {
+  color: #00d6d6;
+  text-shadow: 0 0 10px #00d6d6;
+}
+
+.post-thread .right .file-button-group .file label i.fa-circle-play {
+  color: #00c2ff;
+  text-shadow: 0 0 10px #00c2ff;
+}
+
+.middle-side .view-thread {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.view-thread .left {
+  flex: 6%;
+}
+
+.view-thread .left img {
+  width: 100%;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.view-thread .right {
+  flex: 94%;
+  padding-left: 20px;
+}
+
+.view-thread .right .top {
+  display: flex;
+  align-items: center;
+  height: 5vh;
+}
+
+.view-thread .right .top .profile-user {
+  flex: 1;
+}
+
+.view-thread .right .top h3 {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.view-thread .right .top .fa-circle-check {
+  color: #00a3ff;
+}
+
+.view-thread .right .top span {
+  color: #9f9f9f;
+}
+
+.view-thread .right .top .options {
+  flex: 1;
+  text-align: right;
+  font-size: 15px;
+}
+
+.view-thread .right .content-thread {
+  margin-top: 15px;
+}
+
+.view-thread .right .content-thread p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.view-thread .right .content-thread img {
+  width: 100%;
+  max-height: 400px;
+  margin-top: 10px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.view-thread .right .bottom {
+  margin-top: 20px;
+}
+
+.view-thread .right .bottom .react-view {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.view-thread .right .bottom .react-group {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.view-thread .right .bottom .react-group i {
+  font-size: 13px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.view-thread .right .bottom .react-group span {
+  font-size: 13px;
+}
+
+.view-thread .right .bottom .react-group i.fa-heart {
+  background-color: #ff3c3c;
+}
+
+.view-thread .right .bottom .react-group i.fa-comment-dots {
+  background-color: #218a6b;
+}
+
+.view-thread .right .bottom .react-button button {
+  background-color: #445769;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 130px;
+  height: 35px;
+  margin-right: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.view-thread .right .bottom .react-button button.btn-like:hover {
+  background-color: #ff3c3c;
+}
+
+.view-thread .right .bottom .react-button button.btn-comment:hover {
+  background-color: #218a6b;
+}
+
+.view-thread .right .bottom .react-button button.btn-dislike {
+  background-color: #ff3c3c;
+}
+
+.right-side .trend {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.right-side .list-trend div.left-trend {
+  width: 95%;
+}
+
+.right-side .list-trend div.left-trend a {
+  color: white;
+  text-decoration: none;
+}
+
+.right-side .list-trend div.left-trend p {
+  color: #9f9f9f;
+}
+
+.right-side .list-trend div.right-trend {
+  width: 5%;
+  text-align: right;
+}
+
+.edit-profile .group-file img {
+  border-radius: 50%;
+  width: 13%;
+  margin-right: 25px;
+}
+
+.edit-profile .group-file {
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile .group-file label {
+  border: 2px solid #4e657c;
+  border-radius: 20px;
+  font-weight: 300;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile .group-file label i.fa-image {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #00d6d6;
+  text-shadow: 0 0 10px #00d6d6;
+}
+
+.edit-profile .group-input label {
+  font-size: 12px;
+}
+
+.edit-profile div.group-input {
+  margin-top: 10px;
+}
+
+.edit-profile .group-input input,
+textarea {
+  background-color: #4e657c;
+  color: #c0cad3;
+  width: 100%;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.edit-profile .group-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.edit-profile .group-btn .btn-cancel button {
+  color: white;
+  background: none;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.edit-profile .group-btn .btn-save button {
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00d6d6;
+  font-weight: 700;
+  color: #263849;
+  cursor: pointer;
+}
+
+.card hr {
+  margin-top: 20px;
+  border: 1px solid grey;
+}
+
+.btn-user-follow {
+  background-color: #00C2FF;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.edit-profile h1 {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.comment-thread .right textarea {
+  background-color: #4e657c;
+  color: #e0e4e8;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.comment-thread .right textarea:focus,
+input:focus {
+  color: #c0cad3;
+  outline: none;
+}
+
+.comment-thread .right textarea::placeholder {
+  color: #9f9f9f;
+}
+
+.comment-thread .right .btn-publish button {
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #00b7df;
+  font-weight: 700;
+  color: #263849;
+  cursor: pointer;
+}
+
+.comment-thread #comment-list {
+  margin-top: 20px;
+  background-color: #23313f;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.comment-thread #comment-list .comment-item {
+  padding: 10px;
+  border-bottom: 2px solid #1c2936;
+}
+
+.comment-thread #comment-list .comment-item .comment-name {
+  font-size: 12px;
+  color: rgb(147, 147, 147);
+  margin-bottom: 4;
+}
+
+.comment-thread #comment-list .comment-item .comment-message {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
